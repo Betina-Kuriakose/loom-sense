@@ -1,0 +1,14 @@
+# Environments
+venv/
+.venv/
+env/
+
+# Secrets
+.env
+
+# Python Cache
+__pycache__/
+*.py[cod]
+
+# Local Data
+note.txt
