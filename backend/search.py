@@ -44,6 +44,14 @@ def find_item(query):
             
     except Exception as e:
         print(f"❌ Search Error: {e}")
+def get_natural_guidance(x, y):
+    # Convert 0-1000 scale to human terms
+    horizontal = "right" if x > 666 else "left" if x < 333 else "center"
+    vertical = "bottom" if y > 666 else "top" if y < 333 else "middle"
+    
+    if horizontal == "center" and vertical == "middle":
+        return "It's right in the middle of your desk."
+    return f"Look towards the {vertical} {horizontal} area of your workspace."        
 
 if __name__ == "__main__":
     q = input("What are you looking for? ")
